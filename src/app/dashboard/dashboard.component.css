@@ -1,0 +1,31 @@
+.container {
+    
+}
+
+.addbut {
+    position: absolute;
+    right: 3%;
+    bottom: 5%;
+
+    border-radius: 35px;
+    box-shadow: 0 0 5px grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 10px;
+
+    cursor: pointer;
+    font-family: armadillo;
+    font-weight: bold;
+    color: grey;
+}
+
+.addbut:hover {
+    box-shadow: 0 0 10px grey;
+    background-color: whitesmoke;
+    color: black;
+}
