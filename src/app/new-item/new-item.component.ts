@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-new-item',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewItemComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('yesbut') yesButton: ElementRef;
+  @ViewChild('nobut') noButton: ElementRef;
 
-  ngOnInit() {
+  constructor(private renderer: Renderer2) { }
+
+  ngOnInit() { }
+
+  isEmiThere(status: boolean) {
+    
   }
 
 }

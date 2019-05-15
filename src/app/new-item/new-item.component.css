@@ -1,37 +1,21 @@
 .newitemcontainer {
     font-family: armadillo;
     text-align: center;
-    font-size: 2em;
     cursor: default;
 }
 
-.inputgrid {
-    display: grid;
-    grid-template-columns: repeat(2, 0.4fr);
-    grid-gap: 20px;
-    justify-content: center;
-}
-
-.inputcard {
-    box-shadow: 0 0 5px grey;
-    padding: 10px;
+#devicename {
+    width: 50%;
+    margin: 0 auto;
     border-radius: 10px;
-    text-align: center;
 }
 
-.inputcard:hover {
-    box-shadow: 0 0 10px grey;
+#devicetext {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-.inputfield {
-    font-family: armadillo;
-    font-size: 1.1em;
-    text-align: center;
-    border: none;
+.fieldlabel {
     color: grey;
-}
-
-.inputfield:focus {
-    outline: none;
-    border-bottom: 1px solid black;
 }
