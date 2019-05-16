@@ -1,25 +1,43 @@
 <div class="newitemcontainer">
   <h1>Add New Item</h1>
   <br />
-  <input class="form-control" id="devicename" placeholder="Enter the device name" #deviceName>
+  <input class="form-control" id="devicename" placeholder="Enter the device name" [(ngModel)]="device.name">
   <br />
-  <textarea class="form-control" id="devicetext" placeholder="Enter the description of the item"></textarea>
+  <textarea class="form-control" id="devicetext" placeholder="Enter the description of the item" [(ngModel)]="device.description"></textarea>
   <br />
   <div class="input-group mb-3" style="margin: 0 auto; width: 40%">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">Cost of the Item</span>
     </div>
-    <input type="text" class="form-control" placeholder="in rupees" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="number" class="form-control" placeholder="in rupees" [(ngModel)]="deviceCost">
+  </div>
+  <br />
+  <div>
+    <span>What's the urgency ?</span>
+    &nbsp;
+    <select id="deviceurgency" (change)="getUrgency($event)">
+      <option>Want it Now!</option>
+      <option>Must have it now!</option>
+      <option>Its good to have!</option>
+      <option>Anytime</option>
+    </select>
   </div>
   <br />
   <span style="color: #333">EMI applicable ?</span>
   <br />
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" #yesbut (click)="isEmiThere(true)">
     <label class="form-check-label" for="inlineRadio1">Yes</label>
   </div>
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" #nobut (click)="isEmiThere(true)" checked>
     <label class="form-check-label" for="inlineRadio2">No</label>
+  </div>
+  <br />
+  <br />
+  <input id="deviceemi" type="number" class="form-control" placeholder="What's the EMI ?" [(ngModel)]="deviceEmi">
+  <div class="actbuts">
+    <button class="btn btn-success" (click)="addAnItem()">Add Item</button>
+    <button class="btn btn-info" (click)="goToDashboard()">Cancel</button>
   </div>
 </div>

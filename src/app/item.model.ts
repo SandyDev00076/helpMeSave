@@ -1,7 +1,7 @@
 import { PriorityScale } from './priority.enum';
 import { PossessionStatus } from './possessionStatus.enum';
 
-export interface Item {
+export class Item {
     name: string;
     price: number;
     description: string;

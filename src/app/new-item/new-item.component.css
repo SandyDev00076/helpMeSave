@@ -16,6 +16,29 @@
     border-radius: 10px;
 }
 
+#deviceemi {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: none;
+}
+
+#deviceurgency {
+    border-radius: 5px;
+}
+
 .fieldlabel {
     color: grey;
+}
+
+.actbuts {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.actbuts > button {
+    width: 200px;
 }
