@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NewItemComponent } from './new-item/new-item.component';
 import { FormsModule } from '@angular/forms';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    NewItemComponent
+    NewItemComponent,
+    ItemCardComponent
   ],
   imports: [
     BrowserModule,

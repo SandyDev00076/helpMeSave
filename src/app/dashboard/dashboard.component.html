@@ -1,4 +1,5 @@
 <div class="container">
+  <app-item-card *ngFor="let item of itemList" [itemObject]="item"></app-item-card>
   <div class="addbut" (click)="addNew()">
     <i class="fas fa-plus"></i>
     &nbsp;

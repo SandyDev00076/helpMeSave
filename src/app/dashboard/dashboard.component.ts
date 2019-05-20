@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
+import { Item } from '../item.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,10 +10,16 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  subscription: any;
+  itemList: Item[] = [];
+
+  constructor(private router: Router,
+              private dataService: DataService) { }
 
   ngOnInit() {
-    
+    this.subscription = this.dataService.getList().subscribe((data) => {
+      this.itemList = data;
+    });
   }
 
   addNew() {

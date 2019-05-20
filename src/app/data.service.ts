@@ -16,4 +16,10 @@ export class DataService {
   editList(newList) {
     this.theList.next(newList);
   }
+
+  addToList(newItem: Item) {
+    let newArr = [...this.theList.value, newItem];
+    console.log(newArr);
+    this.theList.next(newArr);
+  }
 }

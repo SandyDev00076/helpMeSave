@@ -45,11 +45,13 @@ export class NewItemComponent implements OnInit {
   }
 
   addAnItem() {
-    this.device.emiMonthly = parseFloat(this.deviceEmi);
+    if(this.deviceEmi) this.device.emiMonthly = parseFloat(this.deviceEmi);
+    else this.device.emiMonthly = -1;
     this.device.price = parseFloat(this.deviceCost);
     this.device.status = PossessionStatus.NotYetPlanned;
 
-    this.dataService.editList(this.device);
+    this.dataService.addToList(this.device);
+    this.router.navigateByUrl('');
   }
 
   getUrgency(evt: any) {
